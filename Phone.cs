@@ -26,5 +26,20 @@ namespace Telephone
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+            comboBox1.SelectedIndex = -1;
+            textBox1.Focus();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
