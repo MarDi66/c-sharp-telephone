@@ -86,5 +86,15 @@ namespace Telephone
             MessageBox.Show("Deleted succesfully !");
             Display();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("UPDATE Mobiles SET Firstname = '" + textBox1.Text + "', Lastname = '" + textBox2.Text + "', Mobile = '" + textBox3.Text + "', Email = '" + textBox4.Text + "', Category = '" + comboBox1.Text + "' WHERE (Mobile = '" + textBox3.Text + "')", con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Updated succesfully !");
+            Display();
+        }
     }
 }
