@@ -1,0 +1,9 @@
+C:\Users\PROPRIETAIRE\source\repos\Telephone\Telephone\bin\Debug\Telephone.exe.config
+C:\Users\PROPRIETAIRE\source\repos\Telephone\Telephone\bin\Debug\Telephone.exe
+C:\Users\PROPRIETAIRE\source\repos\Telephone\Telephone\bin\Debug\Telephone.pdb
+C:\Users\PROPRIETAIRE\source\repos\Telephone\Telephone\obj\Debug\Telephone.csprojAssemblyReference.cache
+C:\Users\PROPRIETAIRE\source\repos\Telephone\Telephone\obj\Debug\Telephone.Properties.Resources.resources
+C:\Users\PROPRIETAIRE\source\repos\Telephone\Telephone\obj\Debug\Telephone.csproj.GenerateResource.cache
+C:\Users\PROPRIETAIRE\source\repos\Telephone\Telephone\obj\Debug\Telephone.exe
+C:\Users\PROPRIETAIRE\source\repos\Telephone\Telephone\obj\Debug\Telephone.pdb
+C:\Users\PROPRIETAIRE\source\repos\Telephone\Telephone\obj\Debug\Telephone.Phone.resources
