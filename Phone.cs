@@ -18,6 +18,7 @@ namespace Telephone
         public Phone()
         {
             InitializeComponent();
+            textBox5.Text = "Search...";
             Display();
         }
 
@@ -95,6 +96,56 @@ namespace Telephone
             con.Close();
             MessageBox.Show("Updated succesfully !");
             Display();
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            if(textBox5.Text == "Search...")
+            {
+                SqlDataAdapter sda2 = new SqlDataAdapter("SELECT * FROM Mobiles", con);
+                DataTable dt2 = new DataTable();
+                sda2.Fill(dt2);
+                dataGridView1.Rows.Clear();
+                foreach (DataRow item in dt2.Rows)
+                {
+                    int n = dataGridView1.Rows.Add();
+                    dataGridView1.Rows[n].Cells[0].Value = item["Firstname"].ToString();
+                    dataGridView1.Rows[n].Cells[1].Value = item[1].ToString();
+                    dataGridView1.Rows[n].Cells[2].Value = item[2].ToString();
+                    dataGridView1.Rows[n].Cells[3].Value = item[3].ToString();
+                    dataGridView1.Rows[n].Cells[4].Value = item[4].ToString();
+                }
+            }
+
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Mobiles WHERE (Mobile like '%" + textBox5.Text + "%') OR (Firstname like '%" + textBox5.Text + "%')", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dataGridView1.Rows.Clear();
+            foreach (DataRow item in dt.Rows)
+            {
+                int n = dataGridView1.Rows.Add();
+                dataGridView1.Rows[n].Cells[0].Value = item["Firstname"].ToString();
+                dataGridView1.Rows[n].Cells[1].Value = item[1].ToString();
+                dataGridView1.Rows[n].Cells[2].Value = item[2].ToString();
+                dataGridView1.Rows[n].Cells[3].Value = item[3].ToString();
+                dataGridView1.Rows[n].Cells[4].Value = item[4].ToString();
+            }
+        }
+
+        private void textBox5_Enter(object sender, EventArgs e)
+        {
+            if (textBox5.Text == "Search...")
+            {
+                textBox5.Text = "";
+            }
+        }
+
+        private void textBox5_Leave(object sender, EventArgs e)
+        {
+            if (textBox5.Text == "")
+            {
+                textBox5.Text = "Search...";
+            }
         }
     }
 }
